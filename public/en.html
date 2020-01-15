@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="" class="nav__icon"></a>
+        <ul class="menu">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <select id="lang">
+                    <option value="fr">Français</option>
+                    <option value="en" selected>English</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        
+        <div class="about">
+            <div class="center">
+                <img src="assets/photo.jpg" alt="Photo" class="circle">
+                <h1 class="name">Fabien Duterte</h1>
+                <h2 class="description">PHP Back-End Developer</h2>
+                <p class="description">Passionnate PHP developer since I was 15 years old</p>
+            </div>
+        </div>
+        
+        <div class="skills" id="skills">
+            <img src="assets/php.jpeg" alt="image PHP" id="php">
+            <img src="assets/js.png" alt="image JavaScript" id="js">
+            <img src="assets/java.png" alt="image Java" id="java">
+            <img src="assets/python.png" alt="image python" id="python">
+            <img src="assets/html5.png" alt="image html5" id="html">
+            <img src="assets/css.png" alt="image css" id="css">
+            <img src="assets/sql.png" alt="image sql" id="sql">
+        </div>
+        
+        <div class="projects" id="projects">
+            <h1 class="center">My projects</h1>
+            
+            <div class="row">
+                
+                <div class="card">
+                    <img class="card-header" src="assets/stormbox.png" alt="image">
+                    <div class="card-body">
+                        <h1>Stormbox</h1>
+                        <p>Stormbox is a dropbox-like project written in PHP using my own framework.</p>
+                        <button class="card-button">
+                            <a href="https://github.com/Hypario/stormbox">Look on github</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-header" src="assets/bomberman.png" alt="image">
+                    <div class="card-body">
+                        <h1>Bomberman</h1>
+                        <p>Bomberman is a game using Unit written in C#.</p>
+                        <button class="card-button">
+                            <a href="https://github.com/Hypario/Bomberman">Look on github</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-header" src="assets/IUTSite.png" alt="image">
+                    <div class="card-body">
+                        <h1>IUT Website - October 2018</h1>
+                        <p>Remake of a website for a tutoral project using HTML / CSS.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-header" src="assets/marathon.png" alt="image">
+                    <div class="card-body">
+                        <h1>Marathon Project - December 2019</h1>
+                        <p>48 hours to create a Website in team of 7 using the framework PHP : Laravel.</p>
+                        <button class="card-button">
+                            <a href="https://github.com/Hypario/MarathonIUTLens">Look on github</a>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="cv">
+            <h1 class="center" id="cv">My CV</h1>
+            
+            <a href="assets/cv.png" class="cv-img">
+                <img src="assets/cv.png" alt="Mon CV">
+            </a>
+        </div>
+        
+        <div class="contact center">
+            <h1 id="contact">Contact me</h1>
+            
+            <div class="row-center">
+                <a><img class="img" src="assets/linkedin.png" alt="Linkedin"></a>
+                <a href=""><img class="img" src="assets/facebook.png" alt="Facebook"></a>
+                <a href=""><img class="img" src="assets/github.png" alt="Github"></a>
+                <a href="mailto:fabienduterte@mailfence.com">
+                    <img class="img" src="assets/mail.jpeg" alt="Email">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

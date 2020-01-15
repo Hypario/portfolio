@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    color: white;
+    background-color: rgb(245, 245, 245);
+}
+
+.content {
+    display: block;
+    color: black;
+}
+
+.navbar {
+    margin: 0 auto;
+    background-color: #32312f;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 100%;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu {
+    margin-left: 40px;
+}
+
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 14px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.menu li a:hover {
+    border-bottom: 1px white solid;
+}
+
+.nav__icon {
+    display: none;
+}
+
+.about {
+    background-color: #32312f;
+    padding: 21px 42px 42px 42px;
+}
+
+.center {
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.about .center .name {
+    color: white;
+    font-size: 3rem;
+    font-weight: unset;
+}
+
+.about .center .description {
+    font-size: 1.5rem;
+    font-weight: unset;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.skills {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid #32312f;
+    padding: 15px 0;
+}
+
+#php {
+    width: 185px;
+    height: 115px;
+}
+
+#css {
+    width: 81px;
+    height: 115px;
+}
+
+#js, #java, #python, #html, #sql {
+    width: 115px;
+    height: 115px;
+}
+
+.projects {
+    margin-top: 20px;
+    color: #3a4145;
+}
+
+.row {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.row-center {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.row-center .img {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border: 1px grey solid;
+    word-wrap: break-word;
+}
+
+.card .card-header {
+    border-bottom: 1px grey solid;
+    width: 100%;
+    margin: auto 0;
+    flex-shrink: 0;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-body .card-button {
+    float: right;
+    margin-bottom: 10px;
+    background-color: #32312f;
+    border: none;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.cv-img {
+    display: block;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.cv-img > img {
+    width: 100%;
+}
+
+@media screen and (max-width: 740px) {
+
+    .navbar {
+        display: block;
+        height: auto;
+        padding: 0;
+    }
+
+    .menu {
+        display: none;
+        margin: 0;
+    }
+
+    .nav__icon {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50px;
+        height: 66px;
+        cursor: pointer;
+    }
+
+    .nav__icon:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 16px;
+        display: block;
+        width: 1rem;
+        height: 0;
+        box-shadow: 0 10px 0 1px rgba(255, 255, 255, 0.8), 0 16px 0 1px rgba(255, 255, 255, 0.8), 0 22px 0 1px rgba(255, 255, 255, 0.8);
+    }
+
+    .showing {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .showing li {
+        display: block;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        padding: 0;
+
+        text-align: center;
+        line-height: 2.5;
+    }
+
+    .showing li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        margin: 0 auto;
+
+        border-top: 1px white solid;
+        border-bottom: 1px white solid;
+    }
+}
