@@ -6,7 +6,7 @@ const urlsToCache = [
   '/fr.html'
 ];
 
-const CACHE = "v1.0.0";
+const CACHE = "v1.0.1";
 
 // pre-caching
 self.addEventListener('install', (event) => {
