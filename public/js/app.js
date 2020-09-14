@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/SW.js')
+  navigator.serviceWorker.register('https://hypario.netlify.app/SW.js')
     .then((reg) => {
       // registration successful
     })
