@@ -1,13 +1,3 @@
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('https://hypario.netlify.app/SW.js')
-    .then((reg) => {
-      // registration successful
-    })
-    .catch(err => {
-      console.log("fail : " + err)
-    })
-}
-
 // check if a language is in localStorage and display it
 if (localStorage.getItem('lang')) {
   const lang = localStorage.getItem('lang');
