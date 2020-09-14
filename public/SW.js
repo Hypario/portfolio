@@ -6,7 +6,7 @@ const urlsToCache = [
   '/fr.html'
 ];
 
-const CACHE = "v1.0.1";
+const CACHE = "v1.0.3";
 
 // pre-caching
 self.addEventListener('install', (event) => {
@@ -33,31 +33,28 @@ self.addEventListener('activate', (event) => {
   )
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // if found in cache return cache
-        if (response) {
-          return response;
+self.addEventListener('fetch', event => {
+    caches.match(event.request).then((response) => {
+      // get cached response
+      if (response) {
+        return response;
+      }
+
+      // if no cache get response from network
+      return fetch(event.request)
+      .then((httpResponse) => {
+        // can't reach
+        if (!httpResponse || httpResponse.status !== 200 || httpResponse.type !== "basic") {
+          return httpResponse;
         }
 
-        // get response from network
-        return fetch(event.request)
-          .then((response) => {
-            if (!response || response.status !== 200 || response.type !== "basic") {
-              return response;
-            }
+        let responseToCache = httpResponse.clone(); // clone response stream
 
-            let responseToCache = response.clone(); // clone response stream
+        caches.open(CACHE).then((cache) => {
+          return cache.put(event.request, responseToCache) // cache url that are not listed
+        });
 
-            caches.open(CACHE)
-              .then((cache) => {
-                return cache.put(event.request, responseToCache) // cache url that are not listed
-              });
-
-            return response;
-          })
+        return httpResponse;
       })
-  )
+    })
 });
